@@ -9,16 +9,16 @@ const Earth = () => {
   const earth = useGLTF("./helmet Copy/scene.gltf");
   return (
     <mesh>
-      <hemisphereLight intensity={2} groundColor="orangered" />
+      <hemisphereLight intensity={3} groundColor="#915EFF" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
-        intensity={2}
+        intensity={8}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={0.1} />
+      <pointLight intensity={8} />
       <primitive object={earth.scene} scale={1.7} position={[0, 0, 0]} />
     </mesh>
   );
